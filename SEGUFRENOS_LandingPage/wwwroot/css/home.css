@@ -1,0 +1,179 @@
+﻿*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+@font-face {
+    font-family: 'Exo 2 Variable';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/exo-2:vf@5.3.0/latin-wght-normal.woff2) format(woff2) tech(variations);
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+    font-family: 'Exo 2 Variable';
+    font-style: italic;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/exo-2:vf@5.3.0/latin-wght-italic.woff2) format(woff2) tech(variations);
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+:root {
+    --azul-segufrenos: #123B63;
+    --verde-segufrenos: #8DD316;
+}
+
+body {
+    font-family: 'Exo 2 Variable', sans-serif;
+    background-color: var(--azul-segufrenos);
+    color: white;
+}
+
+.container-fluid {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+}
+
+.header-segufrenos {
+    background-color: var(--azul-segufrenos);
+    padding: .5rem 1rem .5rem;
+
+    .navbar-brand {
+        padding-bottom: 0;
+    }
+
+    .nav-link {
+        color: white;
+    }
+
+    .navbar-nav {
+        justify-content: center;
+    }
+
+    .logo-segu {
+        font-weight: 800;
+        color: var(--verde-segufrenos);
+        font-style: italic;
+    }
+
+    .logo-frenos {
+        font-weight: 800;
+        color: white;
+        font-style: italic;
+    }
+
+    .botones-contacto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        .btn {
+            box-shadow: none;
+        }
+
+        .btn-outline-light {
+            font-weight: 600;
+            transition: 0.2s all ease;
+
+            &:hover, &:focus, &:active {
+                transform: scale(0.9);
+                color: var(--azul-segufrenos);
+                background-color: white;
+            }
+        }
+
+        .btn-primary {
+            background-color: var(--verde-segufrenos);
+            border: none;
+            color: var(--azul-segufrenos);
+            font-weight: 600;
+            transition: 0.2s all ease;
+
+            &:hover, &:focus, &:active {
+                transform: scale(0.9);
+            }
+        }
+
+        a {
+            color: white;
+        }
+    }
+}
+
+.hero {
+    background-image: linear-gradient(to right, var(--azul-segufrenos), transparent), url("/HeroLandingSegufrenosGenAI.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+
+    .textos-hero {
+        height: 100%;
+        width: 35%;
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+            color: var(--verde-segufrenos);
+            font-weight: 700;
+        }
+    }
+}
+
+.servicios {
+    min-height: 500px;
+    background-color: var(--azul-segufrenos);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    h1 {
+        color: var(--verde-segufrenos);
+        font-weight: 700;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: .5rem;
+    }
+
+    .conjunto-cards {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 1rem 1rem 1rem;
+        flex: 1;
+
+        & > div {
+            padding: 1rem;
+        }
+
+        .card {
+            border-color: var(--azul-segufrenos);
+            padding: 1rem;
+            height: 100%;
+            width: 100%;
+
+            .card-title {
+                text-align: center;
+                color: var(--azul-segufrenos);
+                font-weight: 800;
+                margin-top: 1rem;
+            }
+
+            .card-text {
+                text-align: justify;
+                color: var(--azul-segufrenos);
+            }
+        }
+    }
+}
